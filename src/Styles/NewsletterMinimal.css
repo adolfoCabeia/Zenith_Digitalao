@@ -1,0 +1,93 @@
+:root {
+  --gradient: linear-gradient(90deg, #7d3cff, #c026d3);
+  --zen-text: #eef2ff;
+  --zen-sub: #9fa8c3;
+  --bg-dark: #0b1226;
+}
+
+.newsletter-fw {
+  width: 100%;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Conteúdo centralizado */
+.newsletter-fw .content {
+  max-width: 720px;
+  width: 100%;
+}
+
+/* Título */
+.newsletter-fw h2 {
+  font-size: 2.6rem;
+  line-height: 1.1;
+  color: var(--zen-text);
+  margin-bottom: 14px;
+  letter-spacing: -1px;
+}
+
+/* Texto */
+.newsletter-fw p {
+  font-size: 1.1rem;
+  color: var(--zen-sub);
+  margin-bottom: 36px;
+}
+
+/* Formulário */
+.newsletter-form-fw {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Input */
+.newsletter-form-fw input {
+  width: 100%;
+  max-width: 380px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--zen-text);
+  backdrop-filter: blur(6px);
+}
+
+.newsletter-form-fw input::placeholder {
+  color: var(--zen-sub);
+}
+
+/* Botão */
+.newsletter-form-fw button {
+  padding: 16px 28px;
+  border-radius: 12px;
+  border: none;
+  background: var(--gradient);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.newsletter-form-fw button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(125, 60, 255, 0.35);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .newsletter-fw h2 {
+    font-size: 2.1rem;
+  }
+  .newsletter-form-fw {
+    gap: 10px;
+  }
+  .newsletter-form-fw input {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+
+:root{
+    --Cor-Principal: #1E1B2E;
+    --text-principal: #fff;
+    --text-secundaria: #D3D3D3;
+}
+
+body{
+    background: radial-gradient(circle at top, #0a0a25 10%, #020211 90%);
+    scroll-behavior: smooth;
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+header{
+    transform: translateY(-10px);
+    transition: 0.3s ease-in-out;
+}
+
+header.cabecalho{
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transform: translateY(0);
+}
+
+header section.container{
+    display: flex;
+    padding: 1rem 0 0 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header section.container .menu .glass {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 6px;
+    
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    z-index: 9999;
+}
+
+header section.container .menu .glass h2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    color: var(--text-secundaria);
+}
+
+header section.container .menu nav{
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    position: absolute;
+    border: 1px solid white;
+    margin-top: 5px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    z-index: 9999;
+    transform: translateY(-10px);
+    transition: 0.3s ease-in-out;
+}
+
+header section.container .menu nav.active{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+header section.container .menu nav ul{
+    display: flex;
+    flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.3);
+    gap: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    backdrop-filter: blur(40px);
+}
+
+header section.container .menu nav ul a{
+    color: var(--text-secundaria);
+    font-size: 1.5rem;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+header section.container .menu nav ul a:hover{
+    color: #FF00DE;
+}
+
+header section.container .menu nav ul a.active-link{
+    color: #FF00DE;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+@media (max-width: 684px){
+    header.cabecalho body{
+        margin-top: 100px;
+    }
+}

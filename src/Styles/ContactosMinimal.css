@@ -1,0 +1,50 @@
+:root {
+  --gradient: linear-gradient(90deg, #7d3cff, #c026d3);
+  --zen-text: #ffffff;
+  --zen-sub: #b9c3d6;
+  --bg-dark: #0b1226;
+}
+
+.contact-banner {
+  width: 100%;
+  padding: 90px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  color: var(--zen-text);
+  letter-spacing: -0.5px;
+}
+
+.contact-content p {
+  color: var(--zen-sub);
+  margin-bottom: 22px;
+  font-size: 1rem;
+}
+
+.cta-whatsapp {
+  display: inline-block;
+  padding: 14px 26px;
+  font-weight: 700;
+  border-radius: 12px;
+  background: var(--gradient);
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cta-whatsapp:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(125, 60, 255, 0.35);
+}
+
+@media (max-width: 600px) {
+  .contact-content h2 {
+    font-size: 1.8rem;
+  }
+}

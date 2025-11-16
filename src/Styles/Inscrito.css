@@ -1,0 +1,124 @@
+/* InscricaoCurso.css */
+:root {
+  --bg: #0b1226;
+  --text: #eef2ff;
+  --sub: #9ca3af;
+  --card: #11182e;
+  --gradient: linear-gradient(90deg, #7d3cff, #c026d3);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+.inscricao-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.inscricao-form {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.inscricao-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.8rem;
+}
+
+.inscricao-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: var(--sub);
+}
+
+.inscricao-form input,
+.inscricao-form select,
+.inscricao-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.inscricao-form input:focus,
+.inscricao-form select:focus,
+.inscricao-form textarea:focus {
+  border: 1px solid #c026d3;
+  box-shadow: 0 0 10px rgba(192, 38, 211, 0.5);
+}
+
+.inscricao-form input[type="file"] {
+  padding: 0.5rem;
+}
+
+.inscricao-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.3rem;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: var(--sub);
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 0.5rem;
+  accent-color: #c026d3; /* cor do círculo selecionado */
+}
+
+.inscricao-form button {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: var(--gradient);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.inscricao-form button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .inscricao-form {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+  }
+}
