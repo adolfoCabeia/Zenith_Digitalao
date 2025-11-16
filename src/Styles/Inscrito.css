@@ -11,11 +11,9 @@
 }
 
 .inscricao-container {
-
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
 }
 
 .inscricao-form {
@@ -24,7 +22,7 @@
   backdrop-filter: blur(15px);
   border-radius: var(--radius);
   padding: 2.5rem;
-  width: 70%;
+  width: 60%;
   box-shadow: var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -133,12 +131,18 @@ inscricao-form select option {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 684px) {
+    .inscricao-container{
+        margin-top: 40px;
+    }
   .inscricao-form {
+    width: 90%;
     padding: 1.5rem;
     border-radius: 12px;
   }
-
+  .inscricao-form h2{
+    font-size: 1.5em;
+  }
   .radio-group {
     flex-direction: column;
   }
